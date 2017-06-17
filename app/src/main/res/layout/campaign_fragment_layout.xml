@@ -185,14 +185,4 @@
         </LinearLayout>
     </ScrollView>
 
-    <android.support.design.widget.FloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|right"
-        android:layout_margin="10dp"
-        android:backgroundTint="@color/colorPrimary"
-        android:tint="@android:color/white"
-        android:src="@drawable/ic_add_black_24dp"
-        android:id="@+id/campaign_fragment_fab" />
-
 </FrameLayout>

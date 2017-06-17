@@ -29,8 +29,6 @@ public class CampaignFragment extends Fragment {
     private EditText campaign_fragment_settings_update_base_hp_text;
     private UpdateNavigationListener updateNavigationListener;
 
-    private View.OnClickListener floatingActionListener;
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -203,9 +201,6 @@ public class CampaignFragment extends Fragment {
                     .show();
         });
 
-        FloatingActionButton campaign_fragment_fab = (FloatingActionButton) view.findViewById(R.id.campaign_fragment_fab);
-        campaign_fragment_fab.setOnClickListener(floatingActionListener);
-
         return view;
     }
 
@@ -213,10 +208,6 @@ public class CampaignFragment extends Fragment {
         MainActivity.campaignManager.setCurrentHP(id, newHP);
         MainActivity.campaignManager.saveCampaigns(getActivity());
         campaign_fragment_currenthp.setText(String.valueOf(MainActivity.campaignManager.getCurrentHP(id)));
-    }
-
-    public void setFloatingActionListener(View.OnClickListener floatingActionListener) {
-        this.floatingActionListener = floatingActionListener;
     }
 
     public void setUpdateNavigationListener(UpdateNavigationListener updateNavigationListener) {

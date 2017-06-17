@@ -102,13 +102,6 @@ public class MainActivity extends AppCompatActivity
         bundle.putInt("id", id);
         CampaignFragment campaignFragment = new CampaignFragment();
         campaignFragment.setArguments(bundle);
-        campaignFragment.setFloatingActionListener(v -> {
-            FragmentManager fragmentManager = getFragmentManager();
-            fragmentManager
-                    .beginTransaction()
-                    .replace(R.id.content_frame, new AddCampaignFragment())
-                    .commit();
-        });
         campaignFragment.setUpdateNavigationListener((item) -> {
             addItemsNavigation(item);
         });
